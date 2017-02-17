@@ -1,0 +1,20 @@
+msf post(schtasks_modify) > use post/windows/manage/schtasks_delete
+msf post(schtasks_delete) > show options 
+
+Module options (post/windows/manage/schtasks_delete):
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   NAME     msf              yes       Name which uniquely identifies the scheduled task.
+   SESSION                   yes       The session to run this module on.
+
+msf post(schtasks_delete) > set SESSION 2
+SESSION => 2
+msf post(schtasks_delete) > run
+
+[*] System info : Windows 7 (Build 7601, Service Pack 1).
+[*] Logged on Users # :  2
+[*] Deleting schedule as user : [ WIndows-PC\drin ] on process : [ 2436 ]
+[+] Scheduled deleted successfully.
+
+[*] Post module execution completed
